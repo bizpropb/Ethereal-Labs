@@ -1,0 +1,49 @@
+.App {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Background gradient orbs */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.orb-1 {
+  width: 600px;
+  height: 600px;
+  top: -300px;
+  right: -300px;
+  background: radial-gradient(circle, rgba(0, 217, 255, 0.3), transparent 70%);
+  animation: float 20s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 800px;
+  height: 800px;
+  bottom: -400px;
+  left: -400px;
+  background: radial-gradient(circle, rgba(181, 55, 242, 0.3), transparent 70%);
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+.orb-3 {
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255, 46, 151, 0.2), transparent 70%);
+  animation: pulse-glow 15s ease-in-out infinite;
+}
+
+/* Section spacing */
+section {
+  position: relative;
+  z-index: 1;
+}
