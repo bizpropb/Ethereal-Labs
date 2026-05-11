@@ -1,7 +1,6 @@
-.data {
-  padding: 8rem 2rem;
-  background: var(--dark);
-  position: relative;
+﻿.data {
+  padding: 4rem 2rem;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .data-container {
@@ -28,7 +27,6 @@
 
 .data-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(0, 217, 255, 0.2);
 }
 
 .data-card.full-width {
@@ -78,18 +76,17 @@
 
 .data-stat-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(0, 217, 255, 0.3);
 }
 
 .stat-number {
-  font-size: 3.5rem;
+  font-size: 2.625rem;
   font-weight: 900;
   font-family: 'Space Grotesk', sans-serif;
   margin-bottom: 0.5rem;
 }
 
 .stat-description {
-  font-size: 1rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 1px;

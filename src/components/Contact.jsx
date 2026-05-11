@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+﻿import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa'
@@ -36,21 +36,21 @@ const Contact = () => {
       title: 'Email Us',
       value: 'contact@ethereallabs.io',
       link: 'mailto:contact@ethereallabs.io',
-      color: '#00D9FF',
+      color: 'var(--primary)',
     },
     {
       icon: <FaPhone />,
       title: 'Call Us',
       value: '+1 (555) 123-4567',
       link: 'tel:+15551234567',
-      color: '#B537F2',
+      color: 'var(--primary)',
     },
     {
       icon: <FaMapMarkerAlt />,
       title: 'Visit Us',
       value: 'San Francisco, CA',
       link: '#',
-      color: '#FF2E97',
+      color: 'var(--primary)',
     },
   ]
 
@@ -63,7 +63,6 @@ const Contact = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <div className="section-label">Get In Touch</div>
           <h2 className="section-title">
             Let's <span className="gradient-text">Connect</span>
           </h2>
@@ -183,15 +182,10 @@ const Contact = () => {
               />
             </div>
 
-            <motion.button
-              type="submit"
-              className="submit-button"
-              whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(0, 217, 255, 0.5)' }}
-              whileTap={{ scale: 0.95 }}
-            >
+            <button type="submit" className="submit-button">
               <FaPaperPlane />
               Send Message
-            </motion.button>
+            </button>
           </motion.form>
         </div>
 
@@ -203,22 +197,25 @@ const Contact = () => {
         >
           <div className="footer-content">
             <div className="footer-logo">
-              <span className="gradient-text glow-text">Ethereal Labs</span>
+              <span style={{ color: 'var(--primary)' }}>Ethereal Labs</span>
             </div>
             <p className="footer-tagline">
               Pioneering the future of consciousness technology
             </p>
             <div className="footer-links">
-              <a href="#research">Research</a>
-              <span>•</span>
               <a href="#technology">Technology</a>
               <span>•</span>
-              <a href="#team">Team</a>
+              <a href="#data">Data</a>
+              <span>•</span>
+              <a href="#timeline">Timeline</a>
               <span>•</span>
               <a href="#contact">Contact</a>
             </div>
             <p className="footer-copyright">
               © 2025 Ethereal Labs. All rights reserved.
+            </p>
+            <p className="footer-disclaimer">
+              All data depicted on this website is fictional and for demonstration purposes only.
             </p>
           </div>
         </motion.div>

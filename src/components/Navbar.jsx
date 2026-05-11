@@ -16,29 +16,23 @@ const Navbar = () => {
   }, [])
 
   const navItems = [
-    { label: 'Research', href: '#research' },
     { label: 'Technology', href: '#technology' },
     { label: 'Data', href: '#data' },
     { label: 'Timeline', href: '#timeline' },
-    { label: 'Team', href: '#team' },
   ]
 
   return (
-    <motion.nav
-      className={`navbar ${scrolled ? 'scrolled' : ''}`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <motion.a
           href="#hero"
           className="navbar-logo"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 3.0 }}
         >
           <FaBrain className="logo-icon" />
-          <span className="logo-text gradient-text">Ethereal Labs</span>
+          <span className="logo-text bruno-ace-sc-regular">Ethereal</span>
         </motion.a>
 
         <div className="navbar-links desktop">
@@ -47,10 +41,9 @@ const Navbar = () => {
               key={item.label}
               href={item.href}
               className="navbar-link"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.1, color: '#00D9FF' }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 3.3 + index * 0.3 }}
             >
               {item.label}
             </motion.a>
@@ -58,8 +51,9 @@ const Navbar = () => {
           <motion.a
             href="#contact"
             className="navbar-cta"
-            whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(0, 217, 255, 0.5)' }}
-            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 3.3 + navItems.length * 0.3 }}
           >
             Join Us
           </motion.a>
@@ -101,7 +95,7 @@ const Navbar = () => {
           Join Us
         </motion.a>
       </motion.div>
-    </motion.nav>
+    </nav>
   )
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+﻿import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { FaMicrochip, FaServer, FaCode, FaShieldAlt } from 'react-icons/fa'
@@ -24,7 +24,7 @@ const Technology = () => {
         { label: 'Latency', value: '<0.3ms' },
         { label: 'Energy Efficiency', value: '0.1W per 1000 nodes' },
       ],
-      color: '#00D9FF',
+      color: '#c4b5fd',
     },
     {
       icon: <FaServer />,
@@ -37,7 +37,7 @@ const Technology = () => {
         { label: 'Availability', value: '99.99%' },
         { label: 'Global Nodes', value: '47 locations' },
       ],
-      color: '#B537F2',
+      color: '#d072ffff',
     },
     {
       icon: <FaCode />,
@@ -48,9 +48,9 @@ const Technology = () => {
         { label: 'API Calls/sec', value: '1M+' },
         { label: 'Response Time', value: '<10ms' },
         { label: 'Accuracy', value: '99.7%' },
-        { label: 'Protocols', value: 'REST, GraphQL, WebSocket' },
+        { label: 'Protocols', value: 'REST, WebSocket' },
       ],
-      color: '#FF2E97',
+      color: '#ff4aa5ff',
     },
     {
       icon: <FaShieldAlt />,
@@ -63,7 +63,7 @@ const Technology = () => {
         { label: 'Penetration Tests', value: 'Weekly' },
         { label: 'Zero Breaches', value: 'Since inception' },
       ],
-      color: '#00FFB3',
+      color: '#ff4a68ff',
     },
   ]
 
@@ -76,9 +76,8 @@ const Technology = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <div className="section-label">Technology Stack</div>
           <h2 className="section-title">
-            Powered by <span className="gradient-text">Next-Gen</span> Infrastructure
+            Powered by <span className="gradient-text">NextGen</span> Infrastructure
           </h2>
           <p className="section-description">
             Our proprietary technology stack combines quantum computing, advanced AI, and

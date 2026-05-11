@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import {
@@ -37,21 +37,21 @@ const Data = () => {
   ]
 
   const researchProgressData = [
-    { month: 'Jan', papers: 8, patents: 2, trials: 3 },
-    { month: 'Feb', papers: 12, patents: 3, trials: 4 },
-    { month: 'Mar', papers: 15, patents: 4, trials: 5 },
-    { month: 'Apr', papers: 18, patents: 5, trials: 7 },
-    { month: 'May', papers: 22, patents: 6, trials: 8 },
-    { month: 'Jun', papers: 25, patents: 8, trials: 10 },
+    { month: 'Jan', papers: 15, patents: 0, trials: 2 },
+    { month: 'Feb', papers: 19, patents: 2, trials: 6 },
+    { month: 'Mar', papers: 23, patents: 4, trials: 13 },
+    { month: 'Apr', papers: 27, patents: 9, trials: 20 },
+    { month: 'May', papers: 31, patents: 14, trials: 24 },
+    { month: 'Jun', papers: 35, patents: 17, trials: 30 },
   ]
 
   const capabilitiesData = [
     { capability: 'Neural Mapping', value: 98 },
-    { capability: 'Quantum Processing', value: 85 },
-    { capability: 'AI Integration', value: 95 },
-    { capability: 'Data Security', value: 99 },
+    { capability: 'Quantum Processing', value: 75 },
+    { capability: 'AI Integration', value: 96 },
+    { capability: 'Data Security', value: 78 },
     { capability: 'Response Time', value: 92 },
-    { capability: 'Accuracy', value: 97 },
+    { capability: 'Accuracy', value: 78 },
   ]
 
   const CustomTooltip = ({ active, payload }) => {
@@ -76,12 +76,11 @@ const Data = () => {
         <motion.div
           className="data-header"
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="section-label">Data & Insights</div>
           <h2 className="section-title">
-            <span className="gradient-text">Real-Time</span> Research Analytics
+            <span className="gradient-text">Realtime</span> Research Analytics
           </h2>
           <p className="section-description">
             Visualizing our progress and breakthroughs across all research domains.
@@ -92,7 +91,7 @@ const Data = () => {
           <motion.div
             className="data-card glass"
             initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h3 className="data-card-title">Neural Activity Monitoring</h3>
@@ -108,9 +107,9 @@ const Data = () => {
                 <Line
                   type="monotone"
                   dataKey="activity"
-                  stroke="#00D9FF"
+                  stroke="#c4b5fd"
                   strokeWidth={3}
-                  dot={{ fill: '#00D9FF', r: 5 }}
+                  dot={{ fill: '#c4b5fd', r: 5 }}
                   name="Actual Activity"
                 />
                 <Line
@@ -129,7 +128,7 @@ const Data = () => {
           <motion.div
             className="data-card glass"
             initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h3 className="data-card-title">System Capabilities</h3>
@@ -146,7 +145,7 @@ const Data = () => {
                   dataKey="value"
                   stroke="#FF2E97"
                   fill="#FF2E97"
-                  fillOpacity={0.6}
+                  fillOpacity={0.08}
                 />
               </RadarChart>
             </ResponsiveContainer>
@@ -155,7 +154,7 @@ const Data = () => {
           <motion.div
             className="data-card glass full-width"
             initial={{ opacity: 0, y: 50 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <h3 className="data-card-title">Research Output Trends</h3>
@@ -172,9 +171,9 @@ const Data = () => {
                   type="monotone"
                   dataKey="papers"
                   stackId="1"
-                  stroke="#00D9FF"
-                  fill="#00D9FF"
-                  fillOpacity={0.6}
+                  stroke="#c4b5fd"
+                  fill="#c4b5fd"
+                  fillOpacity={0.08}
                   name="Papers"
                 />
                 <Area
@@ -183,7 +182,7 @@ const Data = () => {
                   stackId="1"
                   stroke="#B537F2"
                   fill="#B537F2"
-                  fillOpacity={0.6}
+                  fillOpacity={0.08}
                   name="Patents"
                 />
                 <Area
@@ -192,7 +191,7 @@ const Data = () => {
                   stackId="1"
                   stroke="#FF2E97"
                   fill="#FF2E97"
-                  fillOpacity={0.6}
+                  fillOpacity={0.08}
                   name="Trials"
                 />
               </AreaChart>
@@ -203,7 +202,7 @@ const Data = () => {
         <motion.div
           className="data-stats"
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <div className="data-stat-card glass">

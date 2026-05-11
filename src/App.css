@@ -1,4 +1,4 @@
-.App {
+﻿.App {
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
@@ -19,7 +19,7 @@
   height: 600px;
   top: -300px;
   right: -300px;
-  background: radial-gradient(circle, rgba(0, 217, 255, 0.3), transparent 70%);
+  background: radial-gradient(circle, rgba(196, 181, 253, 0.3), transparent 70%);
   animation: float 20s ease-in-out infinite;
 }
 
